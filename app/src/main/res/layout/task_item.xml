@@ -1,0 +1,73 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+
+    app:cardElevation="4dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <!-- CheckBox à esquerda do texto -->
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/check_box_completed"
+            android:layout_width="wrap_content"
+            android:minWidth="0dp"
+            android:layout_marginTop="10dp"
+            android:minHeight="0dp"
+            app:buttonIconTint="@color/white"
+            app:buttonTint="#2AB514"
+            android:layout_height="wrap_content"
+            android:textSize="14sp" />
+
+        <!-- Layout vertical para o texto e outros elementos -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textTaskTitle"
+                android:layout_width="match_parent"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Jogar bola"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Categoria"
+                android:textColor="#595959"
+                android:textSize="13sp" />
+
+            <!-- Adicione outros elementos conforme necessário -->
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Ícone de exclamação à direita do texto -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewImportant"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/exclamation"
+            android:visibility="gone" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.cardview.widget.CardView>
